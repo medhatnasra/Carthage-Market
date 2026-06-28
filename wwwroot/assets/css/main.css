@@ -152,14 +152,13 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 20px 0;
-  transition: all 0.5s;
-  z-index: 997;
+    background-color: rgba(77, 44, 169, 0.9);
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    color: var(--default-color);
+    padding: 20px 0;
+    transition: all 0.5s;
+    z-index: 997;
 }
 
 .header .logo {
@@ -728,7 +727,8 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 60px 20px;
+ 
   scroll-margin-top: 92px;
   overflow: clip;
 }
@@ -1601,6 +1601,9 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio {
+    margin-top: 50px;
+}
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }

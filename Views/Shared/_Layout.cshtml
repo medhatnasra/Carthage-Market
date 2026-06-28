@@ -31,7 +31,7 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
+            <a href="/" class="logo d-flex align-items-center me-auto">
                 <h1 class="sitename">
                     Carthage Market
                 </h1>
@@ -39,11 +39,11 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#featured">Featured Products</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#deals">Deals</a></li>
-                    <li><a href="#brands">Brands</a></li>
+                    <li><a asp-action="Index" asp-controller="Home" class="active">Home</a></li>
+                    <li><a href="#portfolio">Featured Products</a></li>
+                    <li><a asp-action="Categories" asp-controller="Home">Categories</a></li>
+                    <partial name="_LoginPartial" />
+            
 
                     <li class="dropdown">
                         <a href="#"><span>Shop</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -72,33 +72,13 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="#">Shop Now</a>
+            <a class="btn-getstarted" href="/Product/index">Shop Now</a>
 
         </div>
     </header>
     <main class="main">
-
-       
-        <section id="hero" class="hero section accent-background">
-
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1>Carthage Market</h1>
-                        <p>Your Trusted Online Marketplace in Tunisia</p>
-                        <div class="d-flex">
-                            <a href="#about" class="btn-get-started">Get Started</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                        <img src="~/assets/img/hero.png" class="img-fluid animated hero-image" alt="">
-                    </div>
-                </div>
-            </div>
-            
-        </section>
         @RenderBody()
-
+        
     </main>
 
     <footer id="footer" class="footer accent-background">

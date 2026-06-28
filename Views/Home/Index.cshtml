@@ -1,8 +1,69 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model Carthage_Market.Models.ViewModels.FeaturedProductsViewData
+<section id="hero" class="hero section accent-background">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+	<div class="container">
+		<div class="row gy-4">
+			<div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+				<h1>Carthage Market</h1>
+				<p>Your Trusted Online Marketplace in Tunisia</p>
+				<div class="d-flex">
+					<a asp-controller="Product" asp-action="Index" class="btn-get-started">Get Started</a>
+				</div>
+			</div>
+			<div class="col-lg-6 order-1 order-lg-2 hero-img">
+				<img src="~/assets/img/hero.png" class="img-fluid animated hero-image" alt="">
+			</div>
+		</div>
+	</div>
+
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+
+	<!-- Section Title -->
+	<div class="container section-title" data-aos="fade-up">
+		<h2>Featured Products</h2>
+		<p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+	</div><!-- End Section Title -->
+
+	<div class="container">
+
+		<div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+
+			<ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+
+				<li data-filter="*" class="filter-active">All</li>
+				@foreach (var cat in Model.Categories)
+				{
+
+					<li data-filter=".filter-@cat.Name?.Replace(" ", "-")">@cat.Name</li>
+				}
+
+			</ul><!-- End Portfolio Filters -->
+			<div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+			@foreach (var product in Model.Products)
+			{
+					<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-@product.Category?.Name?.Replace(" ", "-")">
+						<div class="portfolio-content h-100">
+							<a href="assets/img/portfolio/app-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
+							<div class="portfolio-info">
+								<h4><a href="portfolio-details.html" title="More Details">@product.Name</a></h4>
+								<p>@product.Description</p>
+							</div>
+						</div>
+					</div><!-- End Portfolio Item -->
+				}
+
+			
+  
+
+			</div><!-- End Portfolio Container -->
+
+		</div>
+
+	</div>
+
+</section><!-- /Portfolio Section -->

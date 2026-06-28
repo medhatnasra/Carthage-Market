@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Carthage Market")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b795ec11623a92243b7770ef300b7bf895864d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9c05f03ad9417d10c5067ec609bca27f7e55fd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Carthage Market")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Carthage Market")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
